@@ -9,7 +9,9 @@ export default {
       colors: {
         clifford: '#da373d',
         btnColor: "#ff6347",
-        hoverColor: "#ff4500"
+        hoverColor: "#ff4500",
+        textColor: "#454444"
+        
  
       },
       spacing: {
@@ -21,7 +23,8 @@ export default {
 
 
       fontFamily: {
-        myCour: "Courgette"
+        myCour: "Courgette",
+        rochester: "Rochester"
       }
 
 
