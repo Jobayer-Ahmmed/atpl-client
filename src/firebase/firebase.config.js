@@ -1,15 +1,15 @@
-
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCv_3sRuX4InhNyrTbcEE6N5lNBwwmYS68",
-  authDomain: "jasshop-3caf1.firebaseapp.com",
-  projectId: "jasshop-3caf1",
-  storageBucket: "jasshop-3caf1.appspot.com",
-  messagingSenderId: "287452385541",
-  appId: "1:287452385541:web:6259c451c2cae42bb7276c"
+  apiKey: "AIzaSyB3KtGgirPnVSfRu5JwYG9R3o10zH6t7_g",
+  authDomain: "dribbble-8362d.firebaseapp.com",
+  projectId: "dribbble-8362d",
+  storageBucket: "dribbble-8362d.appspot.com",
+  messagingSenderId: "86341959533",
+  appId: "1:86341959533:web:a7fcbbd7fc14d980fea464"
 };
+
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

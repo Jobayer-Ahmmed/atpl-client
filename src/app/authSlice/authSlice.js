@@ -92,7 +92,6 @@ export const initializeAuth = () => (dispatch) => {
     }
   });
 
-  // Return a function to unsubscribe when necessary
   return unsubscribe;
 };
 
