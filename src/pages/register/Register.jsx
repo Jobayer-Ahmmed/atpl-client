@@ -1,15 +1,22 @@
 import { useForm } from "react-hook-form";
 import register_logo from "../../assets/register-logo.png";
 import { Link } from "react-router-dom";
+import {useDispatch} from "react-redux"
+import { createUser } from "../../app/features/authSlice/authSlice";
 
 const Register = () => {
+  const dispatch = useDispatch()
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = () => {};
+  const onSubmit = (data) => {
+    console.log(data)
+    const {name, username, email, password} = data
+    dispatch(createUser({email, password}))
+  };
   return (
     <div className="flex flex-col lg:flex-row h-[100vh]">
       <div className=" w-full lg:w-[35%] bg-[rgb(242,216,138)]">
@@ -22,7 +29,7 @@ const Register = () => {
         </h1>
         <img className="mt-6 md:mt-10 lg:mt-20 w-[320px] md:w-[600px] lg:w-[500px] mx-auto" src={register_logo} alt="" />
       </div>
-      <div className=" px-[5%] md:px-[12%]  lg:pl-56  w-full lg:w-[65%] ">
+      <div className=" px-[5%] md:px-[12%]  lg:pl-56  w-full lg:w-[65%]">
         <p className="absolute right-10 mt-12">
           Already a member? <Link className="text-blue-500">Sign In</Link>
         </p>

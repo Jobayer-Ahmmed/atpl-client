@@ -1,7 +1,8 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
-import { auth } from '../../firebase/firebase.config';
+import { auth } from '../../../firebase/firebase.config';
+
 
 
 export const signInAsync = createAsyncThunk(
@@ -12,9 +13,11 @@ export const signInAsync = createAsyncThunk(
   }
 );
 
-export const registerAsync = createAsyncThunk(  // here registerAsync is user define
-  'auth/registerAsync',                         // here auth and registerAsync is user define
+export const createUser = createAsyncThunk(  // here createUser is user define
+  'auth/createUser',                         // here auth and createUser is user define
   async ({ email, password }) => {
+    console.log("I am called")
+    console.log(email, password)
     const response = await createUserWithEmailAndPassword(auth, email, password);
     return response.user;
   }
@@ -56,15 +59,15 @@ const authSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
       })
-      .addCase(registerAsync.pending, (state) => {
+      .addCase(createUser.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(registerAsync.fulfilled, (state, action) => {
+      .addCase(createUser.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload;
       })
-      .addCase(registerAsync.rejected, (state, action) => {
+      .addCase(createUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       })

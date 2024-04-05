@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB3KtGgirPnVSfRu5JwYG9R3o10zH6t7_g",
-  authDomain: "dribbble-8362d.firebaseapp.com",
-  projectId: "dribbble-8362d",
-  storageBucket: "dribbble-8362d.appspot.com",
-  messagingSenderId: "86341959533",
-  appId: "1:86341959533:web:a7fcbbd7fc14d980fea464"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 
