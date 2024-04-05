@@ -10,8 +10,6 @@ export default {
         clifford: '#da373d',
         btnColor: "#ff6347",
         hoverColor: "#ff4500"
-
-
  
       },
       spacing: {
