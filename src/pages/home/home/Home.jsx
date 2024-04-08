@@ -1,3 +1,5 @@
+import Bring from "../../bring/Bring";
+import Profile from "../../profile/Profile";
 import Register from "../../register/Register"
 import {useDispatch, useSelector} from "react-redux"
 
@@ -8,6 +10,9 @@ const Home = () => {
   return (
     <div>
       <Register/>
+      <Profile/>
+      <Bring/>
+      
     </div>
   )
 }

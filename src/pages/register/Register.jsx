@@ -18,7 +18,11 @@ const Register = () => {
     dispatch(createUser({email, password}))
   };
   return (
-    <div className="flex flex-col lg:flex-row h-[100vh]">
+    <div className="flex flex-col lg:flex-row pb-10">
+      {/**********************************
+       *********left aside start**********
+       ***********************************/}   
+    
       <div className=" w-full lg:w-[35%] bg-[rgb(242,216,138)]">
         <h3 className="mx-5 md:mx-0 md:ml-20 mt-16 text-3xl text-[#b69836] font-medium font-rochester">
           diribbble
@@ -29,11 +33,18 @@ const Register = () => {
         </h1>
         <img className="mt-6 md:mt-10 lg:mt-20 w-[320px] md:w-[600px] lg:w-[500px] mx-auto" src={register_logo} alt="" />
       </div>
+      {/**********************************
+       *********left aside end**********
+       ***********************************/}  
+
+      {/**********************************
+       *********right aside start*********
+       ***********************************/}   
       <div className=" px-[5%] md:px-[12%]  lg:pl-56  w-full lg:w-[65%]">
-        <p className="absolute right-10 mt-12">
+        <p className="absolute right-10 mt-10">
           Already a member? <Link className="text-blue-500">Sign In</Link>
         </p>
-        <h1 className="mt-28 text-2xl font-bold">Sign up to Dribbble</h1>
+        <h1 className="mt-24 text-2xl font-bold">Sign up to Dribbble</h1>
         <p className="mt-6">.Username has already been taken --it is a message--</p>
 
         <form className="mt-8 w-full lg:w-[540px] " onSubmit={handleSubmit(onSubmit)}>
@@ -71,7 +82,7 @@ const Register = () => {
           </div>
 
           {/* email div */}
-          <div className="mt-4 md:mt-5 lg:mt-7">
+          <div className="mt-4 md:mt-5 ">
             <label className="text-xl font-medium">Email</label>
             <br />
             <input
@@ -87,7 +98,7 @@ const Register = () => {
           </div>
 
           {/* password div */}
-          <div className="mt-4 md:mt-5 lg:mt-7">
+          <div className="mt-4 md:mt-5 ">
             <label className="text-xl font-medium">Password</label>
             <br />
             <input
@@ -112,7 +123,7 @@ const Register = () => {
           </div>
 
           {/* terms and conditions div */}
-          <div className="mt-4 md:mt-5 lg:mt-7 flex items-start">
+          <div className="mt-4 md:mt-5  flex items-start">
             <input
               className=" w-8 h-8"
               {...register("terms", { required: true })}
@@ -137,6 +148,9 @@ const Register = () => {
           </p>
         </div>
       </div>
+      {/***********************************
+       *********right aside start**********
+       ***********************************/}   
     </div>
   );
 };

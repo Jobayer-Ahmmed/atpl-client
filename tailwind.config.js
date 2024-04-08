@@ -15,10 +15,12 @@ export default {
  
       },
       spacing: {
-        xPadding: "60px",
-        xPadding2: "20px",
         myMargin: "80px",
         titleMargin: "30px",
+      },
+      fontSize: {
+        largeFont: "38px",
+        mediumFont: "30px",
       },
 
 
